@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_9a543528-fbe3-4be0-868a-b1fcec090bb9",
+      "org_id": "user_59dbfd78-a11c-4f16-b65e-69f58b7887f4",
+      "deploy_url": "https://push-par-clevercloud-customers.services.clever-cloud.com/app_9a543528-fbe3-4be0-868a-b1fcec090bb9.git",
+      "name": "back_to_vhs",
+      "alias": "back_to_vhs"
+    }
+  ]
+}
