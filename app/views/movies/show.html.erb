@@ -1,4 +1,50 @@
-<p>
+<div class="container">
+  <h1 class="mt-3">VHS details</h1>
+  <h2>
     <strong>Name:</strong>
     <%= @movie.title.capitalize %>
-  </p>
+  </h2>
+  <h3><strong>Release year:</strong> 1900</h3>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="card mt-3" style="width: 30rem;">
+        <div class="card-body">
+          <h5>Description:</h5>
+          <p><%= @movie.description %></p>
+        </div>
+      </div>
+
+      <div class="vhs-show-card mt-3" style="width: 30rem;">
+        <h5>Book this VHS!</h5>
+
+        <form action="">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">From:</span>
+            <input type="text" class="form-control" placeholder="12/03/2021" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mt-2">
+            <span class="input-group-addon" id="basic-addon1">To:</span>
+            <input type="text" class="form-control" placeholder="18/03/2021" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <input type="submit" value="Book it now!" class="btn btn-gradient mt-2" style="width: 100%">
+        </form>
+      </div>
+
+    </div>
+    <div class="col-6">
+      <div class="card mt-3" style="width: 30rem;">
+        <div class="card-body">
+          <h5>VHS cover:</h5>
+          <% if @movie.photo.attached? %>
+            <%= cl_image_tag @movie.photo.key, class: "img-fluid" %>
+          <% else %>
+            <p>Add or replace the picture</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

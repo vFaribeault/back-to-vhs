@@ -2,6 +2,7 @@
 
 <% @movies.each do |movie|%>
   <%= movie.title %>
+  <%= movie.release_year %>
   <%= link_to "See details", movie_path(movie), class: "btn-medium mr-3"%>
 <% end %>
 
