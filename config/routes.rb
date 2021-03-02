@@ -2,17 +2,20 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :movies, only [:index, :show, :new, :create] do
-    resources :bookings, only [:create]
+  resources :movies, only: [:index, :show] do
+    resources :bookings, only: [:create]
   end
 
-  resources :bookings do
-    member do
-      patch :accept
-      patch :refuse
+  resource :dashboard, only: [:show]
+
+  namespace :owner do
+    resources :movies, only: [:new, :create]
+    resources :bookings do
+      member do
+        patch :accept
+        patch :refuse
+      end
     end
   end
-
-  resource :dashboard, only [:show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
