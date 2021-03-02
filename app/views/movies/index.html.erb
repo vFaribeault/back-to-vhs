@@ -1,0 +1,10 @@
+<h1>Our VHS</h1>
+
+<% @movies.each do |movie|%>
+  <%= movie.title %>
+  <%= link_to "See details", movie_path(movie), class: "btn-medium mr-3"%>
+<% end %>
+
+<br>
+
+<%= link_to "Add VHS", new_owner_movie_path(@movie), class: "btn-medium mr-3"%>
