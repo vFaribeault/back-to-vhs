@@ -3,6 +3,16 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
+    # here I am taking all the movies that have been geocoded
+    # for each movie I am creating a hash with lat & long
+    @markers = @movies.geocoded.map do |movie|
+      {
+        lat: movie.latitude,
+        lng: movie.longitude,
+        # here I am adding info about the movie that I can see when hover a marker
+        infoWindow: render_to_string(partial: "info_window", locals: { movie: movie })
+      }
+    end
   end
 
   def show
