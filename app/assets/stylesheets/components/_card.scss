@@ -1,17 +1,29 @@
-.cards {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
+.body {
+  background-color: rgb(0, 0, 0);
 }
-  
+
+.container-cards {
+  text-align: center;
+  // border: 1px solid green;
+  padding: 30px 0px;
+}
+
+.container-cards h2 {
+  color: rgb(237, 236, 224);
+  font-family: "courier", monospace;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
 .card-category {
-    width: 200px;
-    height: 200px;
-    // border-radius: 3px;
-    // box-shadow: 5px 5px 5px black;
-    text-align: center;
-    padding: 20px;
-    // border: 1px solid rgb(230,230,230);
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  padding: 20px 0px;
 }
-  
-  
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
