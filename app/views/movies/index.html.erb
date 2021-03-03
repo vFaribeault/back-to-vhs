@@ -1,10 +1,21 @@
-<h1>Our VHS</h1>
-
-<% @movies.each do |movie|%>
-  <%= movie.title %>
-  <%= movie.release_year %>
-  <%= link_to "See details", movie_path(movie), class: "btn-medium mr-3"%>
-<% end %>
+<div class="container-cards">
+<h2>Our VHS</h2>
+<div class="movies-cards-index">
+  <% @movies.each do |movie|%>
+  <div class="movie-card-index">
+      <% if movie.photo.attached? %>
+        <%= cl_image_tag movie.photo.key %>
+      <% else %>
+        <p>Missing image</p>
+      <% end %>
+      <%# <div class="movie-infos"> %>
+        <p class="mt-2"><%= movie.title %></p>
+        <p><%= movie.price_per_day %>$</p>
+        <%= link_to "See details", movie_path(movie), class: "vhs-button mb-5"%>
+        </div>
+      <% end %>
+    </div>
+</div>
 
 <br>
 
