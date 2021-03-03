@@ -20,7 +20,7 @@ const initMapbox = () => {
     // Here I am displaying a map in my <div id="map"> in index page
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
+      style: 'mapbox://styles/dlfrancois/cklthqpxy2g6z17t7alxmx6gm'
     });
 
     // Careful here the markers are generated in the movies_controller
