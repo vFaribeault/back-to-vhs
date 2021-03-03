@@ -1,23 +1,10 @@
 <h1>Our VHS</h1>
 
-<div class="container">
-  <div class="row">
-    <% @movies.each do |movie|%>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card-movie" >
-          <img src="https://source.unsplash.com/random">
-            <div class="movie-title">
-              <h2><%= movie.title %></h2>
-            </div>
-            <div class="movie-details ml-3">
-              <p><%= "#{movie.price_per_day}€" %></p>
-              <%= link_to "See details", movie_path(movie), class: "btn-medium mr-3"%>
-            </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
+<% @movies.each do |movie|%>
+  <%= movie.title %>
+  <%= movie.release_year %>
+  <%= link_to "See details", movie_path(movie), class: "btn-medium mr-3"%>
+<% end %>
 
 <br>
 

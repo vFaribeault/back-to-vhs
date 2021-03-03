@@ -2,19 +2,23 @@
   <%= simple_form_for([:owner, @movie]) do |f| %>
 
     <div class="form-inputs">
-      <%= f.input :title %>
+      <%= f.input :title, placeholder: "Give a title"%>
     </div>
 
     <div class="form-inputs">
-      <%= f.input :description %>
+      <%= f.input :description, placeholder: "Add a description" %>
     </div>
 
     <div class="form-inputs">
-      <%= f.input :price_per_day %>
+      <%= f.input :price_per_day, placeholder: "10" %>
     </div>
 
     <div class="form-inputs">
-      <%= f.input :address %>
+      <%= f.input :address, placeholder: "10, Broadway, New York" %>
+    </div>
+
+    <div class="form-inputs">
+      <%= f.input :release_year, placeholder: "1988" %>
     </div>
 
     <div class="form-inputs">

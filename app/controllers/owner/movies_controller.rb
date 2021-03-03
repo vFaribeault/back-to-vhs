@@ -17,6 +17,6 @@ class Owner::MoviesController < ApplicationController
   private
 
   def movie_params
-    params.require(:movie).permit(:title, :description, :photo, :price_per_day, :address)
+    params.require(:movie).permit(:title, :description, :photo, :price_per_day, :address, :release_year)
   end
 end
