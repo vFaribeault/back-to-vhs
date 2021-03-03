@@ -4,7 +4,13 @@
     <strong>Name:</strong>
     <%= @movie.title.capitalize %>
   </h2>
-  <h3><strong>Release year:</strong> 1900</h3>
+  <h3><strong>Release year:</strong>
+    <% if @movie.release_year? %>
+      <%= @movie.release_year %>
+    <% else %>
+      1900
+    <% end %>
+  </h3>
 
   <div class="row">
     <div class="col-6">
