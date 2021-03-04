@@ -22,13 +22,19 @@
 <%# --------- All Cards --------- %>
   <div class="row">
 
+  <%# --------- Card Image --------- %>
     <div class="col-6">
-      <%# --------- Card Description --------- %>
-      <div class="vhs-show-card mt-3" style="width: 30rem;">
-          <h5>Description</h5>
-          <p><%= @movie.description %></p>
+      <div class="vhs-show-card mt-3 mb-3" style="width: 30rem;">
+          <%# <h5>VHS cover</h5> %>
+          <% if @movie.photo.attached? %>
+            <%= cl_image_tag @movie.photo.key, class: "img-fluid" %>
+          <% else %>
+            <p>Missing image</p>
+          <% end %>
       </div>
-      <%# --------- Card Booking --------- %>
+    </div>
+     <%# --------- Card Booking --------- %>
+     <div class="col-6">
       <div class="vhs-show-card mt-3" style="width: 30rem;">
         <h5>Book this VHS!</h5>
         <div class= "d-flex flex-column bd-highlight">
@@ -39,19 +45,11 @@
             <%= f.hidden_field :total_price, value: ""%>
             <%= f.submit "Book VHS", class: "vhs-button w-100" %>
           <% end %>
-          <%= link_to 'Cancel', movies_path, class: "vhs-button d-inline-block text-center mt-2" %>
         </div>
       </div>
-    </div>
-    <%# --------- Card Image --------- %>
-    <div class="col-6">
-      <div class="vhs-show-card mt-3 mb-3" style="width: 30rem;">
-          <h5>VHS cover</h5>
-          <% if @movie.photo.attached? %>
-            <%= cl_image_tag @movie.photo.key, class: "img-fluid" %>
-          <% else %>
-            <p>Missing image</p>
-          <% end %>
+      <%# --------- Card Description --------- %>
+      <div class="vhs-show-card mt-3" style="width: 30rem;">
+          <p><%= @movie.description %></p>
       </div>
     </div>
   </div>
