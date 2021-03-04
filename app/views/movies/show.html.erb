@@ -36,6 +36,7 @@
             <%= f.input :start_date, as: :date, html5: true %>
             <%= f.input :end_date, as: :date, html5: true %>
             <p data-price-per-day="<%= @movie.price_per_day %>" id="price-per-day" >Select your date</p>
+            <%= f.hidden_field :total_price, value: ""%>
             <%= f.submit "Book VHS", class: "vhs-button w-100" %>
           <% end %>
           <%= link_to 'Cancel', movies_path, class: "vhs-button d-inline-block text-center mt-2" %>
