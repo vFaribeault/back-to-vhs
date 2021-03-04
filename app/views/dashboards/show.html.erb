@@ -8,7 +8,7 @@
 
         <div class="row mt-3">
           <% @rentings.each do |renting| %>
-            <div class="col-4">
+            <div class="col-6">
               <div class="movie-card-index">
                 <!-- movie.photo -->
                 <% if renting.movie.photo.attached? %>
@@ -36,7 +36,7 @@
         <div class="row mt-3">
 
           <% @bookings.each do |booking| %>
-            <div class="col-4">
+            <div class="col-6">
               <div class="movie-card-index">
                 <!-- movie.photo -->
                 <% if booking.movie.photo.attached? %>
