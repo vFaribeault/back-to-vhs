@@ -26,7 +26,7 @@ require("channels")
 import "bootstrap";
 
 // Import MapBox
-import { initMapbox } from '../components/init_mapbox';
+// import { initMapbox } from '../components/init_mapbox';
 import { priceCalculation } from '../components/init_price_calculation';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -34,5 +34,6 @@ import { priceCalculation } from '../components/init_price_calculation';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  initMapbox();
+  priceCalculation();
+  // initMapbox();
 });
