@@ -2,11 +2,11 @@
   <%= simple_form_for([:owner, @movie]) do |f| %>
 
     <div class="form-inputs">
-      <%= f.input :title, placeholder: "Give a title"%>
+      <%= f.input :title, placeholder: "Back to the Future"%>
     </div>
 
     <div class="form-inputs">
-      <%= f.input :description, placeholder: "Add a description" %>
+      <%= f.input :description, placeholder: "Marty McFly, a teenager..." %>
     </div>
 
     <div class="form-inputs">
@@ -18,7 +18,7 @@
     </div>
 
     <div class="form-inputs">
-      <%= f.input :release_year, placeholder: "1988" %>
+      <%= f.input :release_year, placeholder: "1985" %>
     </div>
 
     <div class="form-inputs">
@@ -26,7 +26,7 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, class: "vhs-button mt-3 mb-3" %>
+      <%= f.button :submit, "Add VHS", class: "vhs-button mt-3 mb-3" %>
     </div>
   <% end %>
 </div>
