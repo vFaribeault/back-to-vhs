@@ -31,18 +31,15 @@
       <%# --------- Card Booking --------- %>
       <div class="vhs-show-card mt-3" style="width: 30rem;">
         <h5>Book this VHS!</h5>
-
-        <form action="">
-          <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">From</span>
-            <input type="text" class="form-control" placeholder="12/03/2021" aria-label="Username" aria-describedby="basic-addon1">
-          </div>
-          <div class="input-group mt-2">
-            <span class="input-group-addon" id="basic-addon1">To</span>
-            <input type="text" class="form-control" placeholder="18/03/2021" aria-label="Username" aria-describedby="basic-addon1">
-          </div>
-          <input type="submit" value="Book it now!" class="vhs-button mt-2" style="width: 100%">
-        </form>
+        <div class= "d-flex flex-column bd-highlight">
+          <%= simple_form_for [ @movie, @booking ] do |f| %>
+            <%= f.input :start_date, as: :date, html5: true %>
+            <%= f.input :end_date, as: :date, html5: true %>
+            <p data-price-per-day="<%= @movie.price_per_day %>" id="price-per-day" >Select your date</p>
+            <%= f.submit "Book VHS", class: "vhs-button w-100" %>
+          <% end %>
+          <%= link_to 'Cancel', movies_path, class: "vhs-button d-inline-block text-center mt-2" %>
+        </div>
       </div>
     </div>
     <%# --------- Card Image --------- %>
