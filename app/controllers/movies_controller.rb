@@ -2,7 +2,8 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: [:show]
 
   def index
-    @movies = Movie.all.order('created_at DESC')
+    # Here I am excluding my own VHS
+    @movies = Movie.where.not(user: current_user).order('created_at DESC')
     # here I am taking all the movies that have been geocoded
     # for each movie I am creating a hash with lat & long
     @markers = @movies.geocoded.map do |movie|

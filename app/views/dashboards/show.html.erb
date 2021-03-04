@@ -1,0 +1,61 @@
+<div class="container mt-3">
+
+  <div class="row">
+    <!-- Column with my VHS rented to someone else -->
+    <div class="col-6">
+      <div class="mt-5">
+        <h2 >My VHS</h2>
+
+        <div class="row mt-3">
+          <% @rentings.each do |renting| %>
+            <div class="col-4">
+              <div class="movie-card-index">
+                <!-- movie.photo -->
+                <% if renting.movie.photo.attached? %>
+                  <%= cl_image_tag renting.movie.photo.key, width: 110, height: 110 %>
+                <% else %>
+                  <p>Missing image</p>
+                <% end %>
+                <!-- Text -->
+                <p class="mt-2"><%= renting.movie.title %></p>
+                <p class="mt-2"><%= renting.status %></p>
+                <p class="mt-2"><%= renting.total_price %>$</p>
+
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column with my VHS rented to someone else -->
+    <div class="col-6">
+      <div class="mt-5">
+        <h2>Rented VHS</h2>
+
+        <div class="row mt-3">
+
+          <% @bookings.each do |booking| %>
+            <div class="col-4">
+              <div class="movie-card-index">
+                <!-- movie.photo -->
+                <% if booking.movie.photo.attached? %>
+                  <%= cl_image_tag booking.movie.photo.key, width: 110, height: 110 %>
+                <% else %>
+                  <p>Missing image</p>
+                <% end %>
+                <!-- Text -->
+                <p class="mt-2"><%= booking.movie.title %></p>
+                <p class="mt-2"><%= booking.status %></p>
+                <p class="mt-2"><%= booking.total_price %>$</p>
+                <p class="mt-2">Owner <%= booking.movie.owner.first_name %></p>
+
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
