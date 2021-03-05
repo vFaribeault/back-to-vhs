@@ -1,0 +1,5 @@
+meta_product_name: "Back to VHS"
+meta_title: "Back to VHS - All the tapes your dreamed of!"
+meta_description: "Back to VHS the best website to find the tapes of your childhood!"
+meta_image: "logo.jpg" # should exist in `app/assets/images/`
+twitter_account: "@back_to_vhs"   # required for Twitter Cards
