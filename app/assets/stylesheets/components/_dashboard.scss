@@ -1,0 +1,68 @@
+.vhs-container {
+  color: rgb(237, 236, 224);
+  display: flex;
+  justify-content: space-around;
+}
+
+// Owner part //
+
+.vhs-owner-list {
+  width: 50%;
+  padding: 40px;
+  h2 {
+    text-align: center;
+  }
+  p {
+    margin: 5px;
+  }
+}
+
+.vhs-owner-list-bloc {
+  display: flex;
+  justify-content: start;
+  padding: 5px;
+  margin: 20px 0px;
+  border: 1px dashed rgb(237, 236, 224);
+}
+
+.vhs-owner-list-bloc-photo {
+  text-align: left;
+}
+
+.vhs-owner-list-bloc-info {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 0px;
+}
+
+// Booking part //
+
+.vhs-booking-list {
+  width: 50%;
+  padding: 40px;
+  text-align: center;
+  h2 {
+    text-align: center;
+  }
+  p {
+    margin: 5px;
+  }
+}
+
+.vhs-booking-list-bloc {
+  display: flex;
+  justify-content: start;
+  padding: 5px;
+  margin: 20px 0px;
+  border: 1px dashed rgb(237, 236, 224);
+}
+
+.vhs-booking-list-bloc-photo {
+  text-align: left;
+}
+
+.vhs-booking-list-bloc-info {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 0px;
+}
