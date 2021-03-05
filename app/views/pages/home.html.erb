@@ -1,8 +1,10 @@
 <%# --------- Banner --------- %>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images3.alphacoders.com/827/827917.jpg);">
   <div class="container">
-    <p><span class="vhs-title">DISCOVER ALL THE VHS<br>YOU DREAMED ABOUT..</span></p><br>
-	  <p><%= link_to ">PLAY", movies_path, class: "vhs-button" %></p>
+    <p><span class="vhs-title" id="vhs-title"></span></p><br>
+	  <%= link_to movies_path, class: "vhs-button" do %>
+      <%= image_tag "play-button.png" %> PLAY
+    <% end %>
   </div>
 </div>
 

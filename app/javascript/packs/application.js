@@ -29,8 +29,13 @@ import { priceCalculation } from '../components/init_price_calculation';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
+import { loadDynamicBannerText } from '../components/banner';
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   priceCalculation();
+  // initMapbox();
+  loadDynamicBannerText();
 });
+
