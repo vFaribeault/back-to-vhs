@@ -3,9 +3,13 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: [:show]
 
   def index
-    # Here I am excluding my own VHS
-    # @movies = Movie.where.not(user: current_user).order('created_at DESC')
-    @movies = Movie.all.order('created_at DESC')
+    if params[:query].present?
+      @movies = Movie.search_by_title_and_description(params[:query])
+      # Here I am excluding my own VHS
+      # @movies = Movie.where.not(user: current_user).order('created_at DESC')
+    else
+      @movies = Movie.all.order('created_at DESC')
+    end
   end
 
   def show

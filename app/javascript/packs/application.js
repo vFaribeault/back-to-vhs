@@ -25,8 +25,6 @@ require("channels")
 // External imports
 import "bootstrap";
 
-// Import MapBox
-// import { initMapbox } from '../components/init_mapbox';
 import { priceCalculation } from '../components/init_price_calculation';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
