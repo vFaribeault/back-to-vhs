@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     if @booking.save
       flash[:alert] = 'Request submitted!'
       # when possible redirect to 'All requests'
-      redirect_to movies_path
+      redirect_to dashboard_path
     else
       flash[:alert] = 'Something went wrong. Try again.'
       redirect_to movie_path(@movie)
