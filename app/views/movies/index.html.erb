@@ -1,17 +1,20 @@
 <div class="container-cards mt-3">
-  <h2>Our search bar</h2>
   <!-- Search bar -->
+  <div>
   <%= form_tag movies_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control mt-5",
-      placeholder: "Find a VHS"
+      style: "width:50%",
+      placeholder: "Find a VHS",
+      submit_tag: "Search",
+      class: "vhs-button-search-bar mb-5"
     %>
     <%= submit_tag "Search", class: "vhs-button mb-5" %>
+    </div>
   <% end %>
 
   <!-- Movies display -->
-  <h2>Our VHS</h2>
     <div class="movies-cards-index">
       <% @movies.each do |movie|%>
         <div class="movie-card-index">
