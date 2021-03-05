@@ -1,7 +1,7 @@
 puts "Cleaning Database"
+Booking.destroy_all
 Movie.destroy_all
 User.destroy_all
-Booking.destroy_all
 
 puts "Generate user seeds"
 yann = User.create!(first_name: "Yann", last_name: "Letertre", email: "yann@lewagon.com", password: "azerty")

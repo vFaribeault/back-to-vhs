@@ -49,7 +49,7 @@
       <!-- Information -->
       <div class="vhs-booking-list-bloc-info">
         <p><%= booking.movie.title %></p>
-        <p><%= booking.status %></p>
+        <p><%= booking.status.capitalize %></p>
         <p><%= booking.total_price %>$</p>
         <p>Owner: <%= booking.movie.owner.first_name %></p>
       </div>
