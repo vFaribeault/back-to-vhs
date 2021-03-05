@@ -15,8 +15,20 @@
       <!-- Information -->
       <div class="vhs-owner-list-bloc-info">
         <p><%= renting.movie.title %></p>
-        <p><%= renting.status %></p>
         <p><%= renting.total_price %>$</p>
+        <p><%= renting.status.capitalize %></p>
+
+        <% if renting.status == 'pending' %>
+          <div class="vhs-validation">
+            <%= link_to accept_owner_booking_path(renting), method: :patch, remote: true do %>
+              <i class="fas fa-check"></i>
+            <% end %>
+            <%= link_to refuse_owner_booking_path(renting), method: :patch, remote: true do %>
+              <i class="fas fa-times"></i>
+            <% end %>
+          </div>
+        <% end %>
+
       </div>
     </div>
     <% end %>
@@ -42,7 +54,7 @@
         <p>Owner: <%= booking.movie.owner.first_name %></p>
       </div>
     </div>
-    <% end %> 
+    <% end %>
   </div>
 
 </div>
