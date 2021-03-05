@@ -34,6 +34,7 @@ gem 'simple_form'
 gem 'cloudinary', '~> 1.16.0'
 gem 'pg_search', '~> 2.3.0'
 gem 'devise'
+gem 'turbolinks_render'
 
 group :development, :test do
   gem 'pry-byebug'
